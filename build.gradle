@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.stevezero.SimpleEngine'
+version = '1.0-SNAPSHOT'
+
+description = """SimpleEngine"""
+
+sourceCompatibility = 1.9
+targetCompatibility = 1.9
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+}
