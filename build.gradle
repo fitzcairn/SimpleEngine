@@ -1,20 +1,53 @@
-apply plugin: 'java'
-apply plugin: 'maven'
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+
+    // Will need Maven
+    id 'maven'
+
+    // Apply the library plugin for building a jar.
+    id 'java-library'
+}
 
 group = 'com.stevezero.SimpleEngine'
-version = '1.0-SNAPSHOT'
-
-description = """SimpleEngine"""
+version = '0.9'
+description = """Simple 2d java game engine."""
 
 sourceCompatibility = 1.9
 targetCompatibility = 1.9
 
-
-
+// In this section you declare where to find the dependencies of your project
 repositories {
-        
-     maven { url "http://repo.maven.apache.org/maven2" }
+    jcenter()
+    maven { url "http://repo.maven.apache.org/maven2" }
 }
+
+// Dependencies
 dependencies {
-    testCompile group: 'junit', name: 'junit', version:'4.11'
+    // This dependency is found on compile classpath of this component and consumers.
+    compile 'com.google.guava:guava:23.0'
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}
+
+// Set up my source layout to match how eclipse did things.
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/']
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                   'Implementation-Version': project.version)
+    }
 }
