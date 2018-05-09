@@ -13,8 +13,8 @@ group = 'com.stevezero.SimpleEngine'
 version = '0.9'
 description = """Simple 2d java game engine."""
 
-sourceCompatibility = 1.9
-targetCompatibility = 1.9
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 // In this section you declare where to find the dependencies of your project
 repositories {
