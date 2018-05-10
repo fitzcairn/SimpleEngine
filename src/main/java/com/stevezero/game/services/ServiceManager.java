@@ -1,4 +1,4 @@
-package com.stevezero.gmscrusader.game.services;
+package com.stevezero.game.services;
 
 /**
  * Wrapper class to manage connected services.

@@ -1,4 +1,4 @@
-package com.stevezero.gmscrusader.game.services;
+package com.stevezero.game.services;
 
 /**
  * Intended to be overridden for platform specific Achievements.
